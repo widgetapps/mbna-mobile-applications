@@ -31,7 +31,7 @@
     <div ng-view=""></div>
     </div>
 
-    <div class="footer">
+    <div class="footer" ng-hide="hideFooter"> <!-- Need to create a directive to access the factory -->
       <div class="container">
         <a href="#" class="btn pull-left">FR</a>
           <a href="#" class="pull-right">Privacy ></a>
@@ -58,6 +58,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/services/globals.js"></script>
         <!-- endbuild -->
 </body>
 </html>
