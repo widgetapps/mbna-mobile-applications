@@ -9,6 +9,8 @@
  */
 angular.module('mbnaApplicationApp')
   .controller('MainCtrl', function ($scope) {
+        $scope.data = [];
+
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

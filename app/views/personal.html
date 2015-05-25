@@ -1,0 +1,95 @@
+<div ng-include src="'views/progress.html'" class="progress-indicator"></div>
+
+<div class="content-graybg">
+    <h3>Tell us about yourself</h3>
+
+    <p>Lorem</p>
+
+    <img src="" />
+
+    <p>Capture information from your driver's license</p>
+
+    <a href="#">Scan Barcode</a>
+</div>
+
+<div class="content-whitebg">
+    <h3>Personal information</h3>
+    <form>
+        <div class="form-group">
+            <label for="firstName">First name</label>
+            <input type="text" class="form-control" id="firstName" ng-model="data.firstName" placeholder="Enter your first name" />
+        </div>
+        <div class="form-group">
+            <label for="middleName">Middle name</label>
+            <input type="text" class="form-control" id="middleName" ng-model="data.middleName" placeholder="Optional" />
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control" id="lastName" ng-model="data.lastName" placeholder="Enter your last name" />
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" ng-model="data.dob" placeholder="Enter your date of birth" />
+        </div>
+        <div class="form-group">
+            <label for="sin">Social Insurance Number</label>
+            <input type="text" class="form-control" id="sin" ng-model="data.sin" placeholder="Optional" />
+        </div>
+        <div class="form-group">
+            <label for="maidenName">Mother's Maiden name</label>
+            <input type="number" class="form-control" id="maidenName" ng-model="data.maidenName" placeholder="Enter your mother's maiden name" />
+        </div>
+        <div class="form-group">
+            <label>Are you a Canadian resident?</label>
+
+            <div class="radio">
+                <label>
+                    <input type="radio" name="canres" id="optionsRadios1" ng-model="data.canres" value="option1" />
+                    Yes
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="canres" id="optionsRadios2" ng-model="data.canres" value="option2" />
+                    No
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>What other credit cards do you have?</label>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="" ng-model="data.otherCards.mc" /> MasterCard
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="" ng-model="data.otherCards.visa" /> Visa
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="" ng-model="data.otherCards.amex" /> American Express
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="" ng-model="data.otherCards.store" /> Department Store
+                </label>
+            </div>
+        </div>
+    </form>
+    <a href="/#/contact" class="btn">Next</a>
+</div>
+
+<div class="section-incomplete">
+    Contact Information
+</div>
+
+<div class="section-incomplete">
+    Employment Information
+</div>
+
+<div class="section-incomplete">
+    Card Features
+</div>
