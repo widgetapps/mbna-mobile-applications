@@ -5,6 +5,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+      <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600,600italic,700,700italic,300italic,300,200italic,200' rel='stylesheet' type='text/css' />
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -20,21 +23,22 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top header">
         <div class="container">
-            <div class="pull-left">MBNA</div>
-            <div class="pull-right">NEED HELP?</div>
+            <div class="pull-left"><a href="/#/"><img src="images/prototype_mbna.png" height="25 " /></a></div>
+            <div class="pull-right">
+                <span class="help">Need Help?</span>
+                <img src="images/prototype_helpIcon.png" height="25" />
+            </div>
         </div>
     </nav>
 
-    <div class="container content">
-    <div ng-view=""></div>
-    </div>
+    <div ng-view="" class="content"></div>
 
     <div class="footer" ng-hide="hideFooter"> <!-- Need to create a directive to access the factory -->
       <div class="container">
-        <a href="#" class="btn pull-left">FR</a>
-          <a href="#" class="pull-right">Privacy ></a>
+        <a href="#" class="btn pull-left lang-toggle">FR</a>
+          <a href="#" class="pull-right privacy">Privacy <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
       </div>
     </div>
 
@@ -59,6 +63,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/globals.js"></script>
+        <script src="scripts/services/data.js"></script>
         <!-- endbuild -->
 </body>
 </html>

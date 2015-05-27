@@ -1,16 +1,17 @@
 <div ng-include src="'views/progress.html'" class="progress-indicator"></div>
 
-<div class="content-graybg">
-    <h3>Tell us about yourself</h3>
+<div class="content-whitebg container">
+    <h2>Tell us about yourself</h2>
 
-    <p>Lorem</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at enim et ante accumsan cursus.</p>
 </div>
 
-<div class="section-complete">
-    Personal Information
+<div class="section-complete container">
+    Personal Information <a href="/#/personal">Edit</a>
+    <img src="images/prototype_checkbox_checked.png" width="28" class="pull-right" />
 </div>
 
-<div class="content-whitebg">
+<div class="content-whitebg container">
     <h3>Contact information</h3>
     <form>
         <div class="form-group">
@@ -52,13 +53,15 @@
             <input type="tel" class="form-control" id="email" ng-model="data.email" placeholder="Optional" />
         </div>
     </form>
-    <a href="/#/employment" class="btn">Next</a>
+    <a href="/#/employment" class="btn btn-lg btn-block btn-blue">Next</a>
 </div>
 
-<div class="section-incomplete">
+<div class="section-incomplete container">
     Employment Information
+    <img src="images/prototype_checkbox.png" width="28" class="pull-right" />
 </div>
 
-<div class="section-incomplete">
+<div class="section-incomplete container">
     Card Features
+    <img src="images/prototype_checkbox.png" width="28" class="pull-right" />
 </div>

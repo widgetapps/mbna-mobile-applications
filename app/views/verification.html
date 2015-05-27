@@ -1,6 +1,135 @@
-<h3>Verification Questions</h3>
+<div ng-include src="'views/progress.html'" class="progress-indicator"></div>
 
+<div class="container">
+    <h3>Verification Questions</h3>
+    <form>
 
-<a href="/#/cancel" class="btn">Cancel</a>
+        <div class="row row-verify">
+            <div class="col-xs-1">
+                <strong>1</strong>
+            </div>
+            <div class="col-xs-11">
+                <div class="form-group">
+                    <label>With which TD Canada Trust branch location do you have an active personal or home equity line of credit?</label>
 
-<a href="/#/approved" class="btn">Continue</a>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="branchloc" ng-model="data.verify.branchloc" value="option1" />
+                            601 3rd St. S. E.
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="branchloc" ng-model="data.verify.branchloc" value="option2" />
+                            510 Brant Steet
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="branchloc" ng-model="data.verify.branchloc" value="option2" />
+                            292 Charlottetown Street
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-verify">
+            <div class="col-xs-1">
+                <strong>2</strong>
+            </div>
+            <div class="col-xs-11">
+                <div class="form-group">
+                    <label>You have a loan (excluding auto loans) with which of the following financial institutions?</label>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="loan" ng-model="data.verify.loan" value="option1" />
+                            Toronto-Dominion Bank
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="loan" ng-model="data.verify.loan" value="option2" />
+                            BCU Financial
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="loan" ng-model="data.verify.loan" value="option2" />
+                            None of the above
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-verify">
+            <div class="col-xs-1">
+                <strong>3</strong>
+            </div>
+            <div class="col-xs-11">
+                <div class="form-group">
+                    <label>In the last two years, have you personally requested and received a copy of your credit
+                        report from TransUnion for your own personal use (not for credit purposes through a bank, store
+                        or other merchant)?</label>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="creditreport" ng-model="data.verify.creditreport" value="option1" />
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="creditreport" ng-model="data.verify.creditreport" value="option2" />
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-verify">
+            <div class="col-xs-1">
+                <strong>2</strong>
+            </div>
+            <div class="col-xs-11">
+                <div class="form-group">
+                    <label>Your residential telephone number is registered under which of the following names?</label>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="phonename" ng-model="data.verify.phonename" value="option1" />
+                            Hitchen
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="phonename" ng-model="data.verify.phonename" value="option2" />
+                            Dunberryl
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="phonename" ng-model="data.verify.phonename" value="option2" />
+                            None of the above
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <a href="/#/cancel" class="btn btn-block btn-lg btn-light">Cancel</a>
+        </div>
+        <div class="col-xs-6">
+            <a href="/#/approved" class="btn btn-block btn-lg btn-dark">Continue</a>
+        </div>
+    </div>
+</div>

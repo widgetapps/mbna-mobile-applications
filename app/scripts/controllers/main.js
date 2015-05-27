@@ -8,12 +8,8 @@
  * Controller of the mbnaApplicationApp
  */
 angular.module('mbnaApplicationApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', ['$scope', '$anchorScroll', function ($scope, $anchorScroll) {
         $scope.data = [];
 
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+        $anchorScroll(0);
+  }]);
