@@ -9,26 +9,20 @@
                 <strong>1</strong>
             </div>
             <div class="col-xs-11">
-                <div class="form-group">
-                    <label>With which TD Canada Trust branch location do you have an active personal or home equity line of credit?</label>
+                <div class="form-group radio-stack">
+                    <label class="radio-question">With which TD Canada Trust branch location do you have an active personal or home equity line of credit?</label>
 
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="branchloc" ng-model="data.verify.branchloc" value="option1" />
-                            601 3rd St. S. E.
-                        </label>
+                        <input type="radio" name="branchloc" id="branchloc1" ng-model="data.verify.branchloc" value="option1" />
+                        <label for="branchloc1" class="radio-label">601 3rd St. S. E.</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="branchloc" ng-model="data.verify.branchloc" value="option2" />
-                            510 Brant Steet
-                        </label>
+                        <input type="radio" name="branchloc" id="branchloc2" ng-model="data.verify.branchloc" value="option2" />
+                        <label for="branchloc2" class="radio-label">510 Brant Steet</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="branchloc" ng-model="data.verify.branchloc" value="option2" />
-                            292 Charlottetown Street
-                        </label>
+                        <input type="radio" name="branchloc" id="branchloc3" ng-model="data.verify.branchloc" value="option3" />
+                        <label for="branchloc3" class="radio-label">292 Charlottetown Street</label>
                     </div>
                 </div>
             </div>
@@ -39,26 +33,20 @@
                 <strong>2</strong>
             </div>
             <div class="col-xs-11">
-                <div class="form-group">
-                    <label>You have a loan (excluding auto loans) with which of the following financial institutions?</label>
+                <div class="form-group radio-stack">
+                    <label class="radio-question">You have a loan (excluding auto loans) with which of the following financial institutions?</label>
 
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="loan" ng-model="data.verify.loan" value="option1" />
-                            Toronto-Dominion Bank
-                        </label>
+                        <input type="radio" name="loan" id="loan1" ng-model="data.verify.loan" value="option1" />
+                        <label for="loan1" class="radio-label">Toronto-Dominion Bank</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="loan" ng-model="data.verify.loan" value="option2" />
-                            BCU Financial
-                        </label>
+                        <input type="radio" name="loan" id="loan2" ng-model="data.verify.loan" value="option2" />
+                        <label for="loan2" class="radio-label">BCU Financial</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="loan" ng-model="data.verify.loan" value="option2" />
-                            None of the above
-                        </label>
+                        <input type="radio" name="loan" id="loan3" ng-model="data.verify.loan" value="option3" />
+                        <label for="loan3" class="radio-label">None of the above</label>
                     </div>
                 </div>
             </div>
@@ -75,16 +63,7 @@
                         or other merchant)?</label>
 
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="creditreport" ng-model="data.verify.creditreport" value="option1" />
-                            Yes
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="creditreport" ng-model="data.verify.creditreport" value="option2" />
-                            No
-                        </label>
+                        <input type="radio" name="creditreport" id="optionsRadios1" ng-model="data.verify.creditreport" value="option1" class="radio-yes" /><input type="radio" name="creditreport" id="optionsRadios2" ng-model="data.verify.creditreport" value="option2" class="radio-no" />
                     </div>
                 </div>
             </div>
@@ -92,29 +71,23 @@
 
         <div class="row row-verify">
             <div class="col-xs-1">
-                <strong>2</strong>
+                <strong>4</strong>
             </div>
             <div class="col-xs-11">
-                <div class="form-group">
-                    <label>Your residential telephone number is registered under which of the following names?</label>
+                <div class="form-group radio-stack">
+                    <label class="radio-question">Your residential telephone number is registered under which of the following names?</label>
 
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="phonename" ng-model="data.verify.phonename" value="option1" />
-                            Hitchen
-                        </label>
+                        <input type="radio" name="phonename" id="phonename1" ng-model="data.verify.phonename" value="option1" />
+                        <label for="phonename1" class="radio-label">Hitchen</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="phonename" ng-model="data.verify.phonename" value="option2" />
-                            Dunberryl
-                        </label>
+                        <input type="radio" name="phonename" id="phonename2" ng-model="data.verify.phonename" value="option2" />
+                        <label for="phonename2" class="radio-label">Dunberryl</label>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="phonename" ng-model="data.verify.phonename" value="option2" />
-                            None of the above
-                        </label>
+                        <input type="radio" name="phonename" id="phonename3" ng-model="data.verify.phonename" value="option3" />
+                        <label for="phonename3" class="radio-label">None of the above</label>
                     </div>
                 </div>
             </div>
