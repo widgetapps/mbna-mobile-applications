@@ -110,7 +110,11 @@ body {
     background-color: #002c5c;
     margin: 0;
     padding: 0;
-    border: none;
+    border-right: 1px solid #658ddb;
+}
+
+.barblock-last {
+    border-right: none;
 }
 
 .section-incomplete, .section-complete {
@@ -122,13 +126,18 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     border-top: 1px solid #9b9b9b;
-    border-bottom: 1px solid #9b9b9b;
 }
 
 .section-complete a, h2 a {
-    font-size: 14px;
+    margin-left: 8px;
+    font-size: 16px;
     color: #0043a7;
     text-decoration: underline;
+}
+
+.section-last {
+    border-top: 1px solid #9b9b9b;
+    border-bottom: 1px solid #9b9b9b;
 }
 
 h1, h2, h3 {
@@ -148,6 +157,15 @@ h2 {
     text-align: left;
     border-bottom: 1px solid #5476ba;
     padding-bottom: 10px;
+}
+
+img.pad {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .content-hero ul {
@@ -192,8 +210,8 @@ h2 {
 }
 
 .content-whitebg ul li {
-    padding-left: 1.1em;
-    text-indent: -0.7em;
+    padding-left: 2em;
+    text-indent: -.7em;
     margin-bottom: 8px;
     font-size: 14px;
 }
@@ -204,12 +222,25 @@ h2 {
     font-size: 18px;
 }
 
+.bullet {
+    display: inline-block;
+    color: #294888;
+    font-size: 20px;
+    margin-left: 0.8em;
+    margin-top: -3px;
+}
+
+.list-item {
+    display: inline-block;
+    margin-bottom: 13px;
+}
+
 .copy-small {
     font-size: 12px;
 }
 
 label {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     color: #294887;
     margin-bottom: 0;
@@ -235,6 +266,92 @@ label {
 
 .form-control:focus {
     box-shadow: none;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+    border: 2px solid #0043a7;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+}
+input[type="checkbox"]:active {
+    box-shadow: none;
+}
+input[type="checkbox"]:hover {
+    background-color: #ffffff;
+}
+input[type="checkbox"]:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    padding: 4px;
+    color: #0043a7;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+    border: 2px solid #0043a7;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+}
+input[type="radio"]:active {
+    box-shadow: none;
+}
+input[type="radio"]:hover {
+    background-color: #ffffff;
+}
+input[type="radio"]:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    padding: 4px;
+    color: #0043a7;
+}
+
+.pin-buttons {
+    display: block;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.pin-button {
+    display: inline-block;
+    padding: 15px;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    font-size: 20px;
+
+}
+.pin-button:hover {
+    text-decoration: none;
+}
+.pin-button-full {
+    width: 100%;
+}
+.pin-button-half {
+    width: 50%;
+}
+.pin-button-primary, .pin-button-primary:hover {
+    background-color: #0043a7;
+    color: #ffffff;
+}
+.pin-button-secondary, .pin-button-secondary:hover {
+    background-color: #dadfed;
+    color: #737373;
 }
 
 .review-content {
@@ -268,6 +385,9 @@ label {
 .footer {
     margin-top: 20px;
     height: 30px;
+    border-top: 1px solid #5476ba;
+    padding-top: 10px;
+    margin-bottom: 15px;
 }
 
 .lang-toggle {

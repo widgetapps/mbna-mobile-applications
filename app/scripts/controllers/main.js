@@ -8,8 +8,10 @@
  * Controller of the mbnaApplicationApp
  */
 angular.module('mbnaApplicationApp')
-  .controller('MainCtrl', ['$scope', '$anchorScroll', function ($scope, $anchorScroll) {
-        $scope.data = [];
+  .controller('MainCtrl', ['$scope', '$anchorScroll', 'data', function ($scope, $anchorScroll, data) {
+        $scope.data = data.formdata;
+
+        //$scope.clearData = data.clearData();
 
         $anchorScroll(0);
   }]);
