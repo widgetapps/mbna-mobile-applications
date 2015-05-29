@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>MBNA Application - Prototype</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -25,13 +25,35 @@
 
     <nav class="navbar navbar-default navbar-fixed-top header">
         <div class="container">
-            <div class="pull-left"><a href="/#/"><img src="images/prototype_mbna.png" height="25 " /></a></div>
-            <div class="pull-right">
+            <div class="pull-left"><a href="/#/"><img src="images/prototype_mbna.png" height="23" /></a></div>
+            <div class="pull-right" slide-toggle="#help-content">
                 <span class="help">Need Help?</span>
-                <img src="images/prototype_helpIcon.png" height="25" />
+                <img src="images/prototype_helpIcon.png" height="23" />
             </div>
         </div>
     </nav>
+    <div class="container slideable" id="help-content">
+        <div class="container">
+            <h2>Ask Us</h2>
+
+            <div>
+                <strong>Monday to Friday</strong><br />
+                9 a.m. to 9 p.m. ET<br />
+                <strong>Saturday</strong><br />
+                10 a.m. to 6 p.m. ET
+            </div>
+
+            <br />
+
+            <a href="#" class="btn btn-blue btn-block btn-lg"><img src="images/prototype_phone.png" height="25" />Call for assistance</a>
+            <a href="#" class="btn btn-blue btn-block btn-lg"><img src="images/prototype_chatIcon.png" height="25" />Chat live with a specialist</a>
+            <br />
+            <br />
+            <br />
+            <br />
+
+        </div>
+    </div>
 
     <div ng-view="" class="content"></div>
 
@@ -57,6 +79,8 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/globals.js"></script>
         <script src="scripts/services/data.js"></script>
+        <script src="scripts/directives/slideable.js"></script>
+        <script src="scripts/directives/slidetoggle.js"></script>
         <!-- endbuild -->
 </body>
 </html>
