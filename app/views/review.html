@@ -113,14 +113,18 @@
     <h2>Card Features  <a href="/#/features">Edit</a></h2>
 </div>
 
-<!--
-<div class="content-whitebg container review-content">
-    <p>I have read and accept the <a href="/#/tacagree.html">Terms &amp; Conditions</a>.</p>
+<div class="content-whitebg container review-content" ng-if="data.inlineFlow">
+    <div class="form-group">
+        <label>I have read and accept the <a href="/#/tac">Terms &amp; Conditions</a>.</label>
+        <div class="radio">
+            <input type="radio" name="terms" id="terms2" ng-model="data.terms" value="option2" class="radio-no" /><input type="radio" name="terms" id="terms1" ng-model="data.terms" value="option1" class="radio-yes" />
+        </div>
+    </div>
 </div>
--->
 
 <div class="container">
-    <a href="/#/tacagree" class="btn btn-lg btn-block btn-blue">Complete Application</a>
+    <a href="/#/tacagree" class="btn btn-lg btn-block btn-red" ng-click="data.step=5" ng-if="!data.inlineFlow">Complete Application</a>
+    <a href="/#/verification" class="btn btn-lg btn-block btn-red" ng-click="data.step=5" ng-if="data.inlineFlow">Complete Application</a>
 </div>
 
 <div class="footer"> <!-- Need to create a directive to access the factory -->

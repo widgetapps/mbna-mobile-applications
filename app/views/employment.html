@@ -116,7 +116,7 @@
             </select>
         </div>
     </form>
-    <a href="/#/features" class="btn btn-lg btn-block btn-blue">Next</a>
+    <a href="/#/features" class="btn btn-lg btn-block btn-blue" ng-click="data.step=3">Next</a>
 </div>
 
 <div ng-if="data.employmentStatus == '2'" class="content-whitebg container">
@@ -213,7 +213,7 @@
     </form>
 
     <p>Total annual household income: ${{(data.income * data.incomeFreq) + (data.otherIncome * data.otherIncomeFreq)}}</p>
-    <a href="/#/features" class="btn btn-lg btn-block btn-blue">Next</a>
+    <a href="/#/features" class="btn btn-lg btn-block btn-blue" ng-click="data.step=3">Next</a>
 </div>
 
 <div ng-if="data.employmentStatus == '3'" class="content-whitebg container">
@@ -312,7 +312,7 @@
 
     <p>Total annual household income: ${{(data.income * data.incomeFreq) + (data.otherIncome * data.otherIncomeFreq)}}</p>
 
-    <a href="/#/features" class="btn btn-lg btn-block btn-blue">Next</a>
+    <a href="/#/features" class="btn btn-lg btn-block btn-blue" ng-click="data.step=3">Next</a>
 </div>
 
 <div ng-if="data.employmentStatus == '4'" class="content-whitebg container">
@@ -361,7 +361,7 @@
     </form>
 
     <p>Total annual household income: ${{(data.income * data.incomeFreq) + (data.otherIncome * data.otherIncomeFreq)}}</p>
-    <a href="/#/features" class="btn btn-lg btn-block btn-blue">Next</a>
+    <a href="/#/features" class="btn btn-lg btn-block btn-blue" ng-click="data.step=3">Next</a>
 </div>
 
 <div class="section-incomplete section-last container">

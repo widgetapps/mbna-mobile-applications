@@ -61,6 +61,10 @@ angular
             templateUrl: 'views/balance.html',
             controller: 'MainCtrl'
         })
+        .when('/balance_add', {
+            templateUrl: 'views/balance_add.html',
+            controller: 'MainCtrl'
+        })
         .when('/creditwise', {
             templateUrl: 'views/creditwise.html',
             controller: 'MainCtrl'

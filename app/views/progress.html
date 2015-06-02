@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="ProgressCtrl">
     <div class="row progressbar-header">
         <div class="col-xs-2"><img src="images/prototype_lock.png" width="20" class="center-block" /></div>
         <div class="col-xs-10">
@@ -7,11 +7,11 @@
         </div>
     </div>
     <div class="row progressbar">
-        <div class="barblock"></div>
-        <div class="barblock"></div>
-        <div class="barblock"></div>
-        <div class="barblock"></div>
-        <div class="barblock"></div>
-        <div class="barblock barblock-last"></div>
+        <div class="barblock" ng-class="{'bar-active': data.step>=1}"></div>
+        <div class="barblock" ng-class="{'bar-active': data.step>=2}"></div>
+        <div class="barblock" ng-class="{'bar-active': data.step>=3}"></div>
+        <div class="barblock" ng-class="{'bar-active': data.step>=4}"></div>
+        <div class="barblock" ng-class="{'bar-active': data.step>=5}"></div>
+        <div class="barblock barblock-last" ng-class="{'bar-active': data.step>=6}"></div>
     </div>
 </div>

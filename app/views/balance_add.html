@@ -1,0 +1,43 @@
+<div class="content-whitebg container">
+    <h3>Balance Transfer</h3>
+
+    <p>You can add up to 3 credits cards. We will transfer the balance of these cards to your new MBNA credit card.</p>
+
+    <img src="images/prototype_card_noname.png" height="130" class="center-block pad" />
+
+    <p class="text-center">Take a picture of your credit card and we'll get the number for you.</p>
+
+    <a href="#" class="btn btn-lg btn-block btn-red"><img src="images/prototype_camera.png" width="20" /> Take Photo</a>
+
+    <form name="form">
+        <div class="form-group" ng-class="{error: form.firstName.$invalid}">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" class="form-control" id="cardNumber" name="cardNumber" ng-model="data.cardNumber" placeholder="Enter card number" required />
+        </div>
+        <div class="form-group">
+            <label for="cardInstitution">Credit Card Institution</label>
+            <select class="form-control" id="cardInstitution" ng-model="data.cardInstitution">
+                <option selected="selected">Select your province</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cardTransfer">Amount to Transfer</label>
+            <input type="number" class="form-control" id="cardTransfer" ng-model="data.cardTransfer" placeholder="$ Enter amount" />
+        </div>
+
+        <div>
+            <a href="/#/balance" class="btn btn-lg btn-block btn-light btn-square">Cancel</a><a href="/#/balance" class="btn btn-lg btn-block btn-gray btn-square">Save</a>
+        </div>
+        <br /><br /><br /><br /><br /><br />
+    </form>
+</div>
+
+
+
+<div class="container pin-buttons">
+    <a href="/#/features" class="pin-button pin-button-full pin-button-primary">Done</a>
+</div>

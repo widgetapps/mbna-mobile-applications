@@ -7,6 +7,7 @@
 
 body {
   padding: 0;
+    color: #1c1c1c;
 }
 
 .ng-modal-overlay {
@@ -48,6 +49,16 @@ body {
     width: 100%;
     z-index: 1000;
     background-color: #ffffff;
+}
+
+.inline-text {
+    height: 180px;
+    overflow: scroll;
+    background-color: #ffffff;
+    broder: 1px solid #8b97b9;
+    padding: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
 }
 
 .btn, .btn-lg {
@@ -113,6 +124,18 @@ body {
     color: #ffffff;
 }
 
+.btn-gray, .btn-gray:hover {
+    background-color: #737373;
+    color: #ffffff;
+}
+
+.btn-square {
+    display: inline-block;
+    border-radius: 0;
+    width: 50%;
+    margin-top: 0 !important;
+}
+
 .header {
     background-color: #002c5c;
     height: 60px;
@@ -174,6 +197,10 @@ body {
 
 .barblock-last {
     border-right: none;
+}
+
+.bar-active {
+    background-color: #658ddb;
 }
 
 .section-incomplete, .section-complete {
@@ -443,6 +470,7 @@ input[type="radio"]:checked, input[type="radio"]:checked:after {
     left: 0;
     background-color: #ffffff;
     width: 100%;
+    border-top: 1px solid #dadfed !important;
 }
 
 .pin-button {
@@ -470,6 +498,13 @@ input[type="radio"]:checked, input[type="radio"]:checked:after {
 .pin-button-secondary, .pin-button-secondary:hover {
     background-color: #dadfed;
     color: #737373;
+}
+
+.cw-initials {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
 }
 
 .review-content {
