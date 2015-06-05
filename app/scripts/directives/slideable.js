@@ -12,7 +12,6 @@ angular.module('mbnaApplicationApp')
       restrict: 'C',
         compile: function (element, attr) {
             //wrap tag
-            console.log('FOUND!');
             var contents = element.html();
             element.html('<div class="slideable_content" style="margin:0 !important; padding: 0 !important" >' + contents + '</div>');
             return function postLink(scope, element, attrs) {

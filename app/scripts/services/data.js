@@ -28,6 +28,8 @@ angular.module('mbnaApplicationApp')
             {'code': 'YT', 'text': 'Yukon'}
         ]
 
+        this.formdata.helpExpanded = false;
+
         // Set the default select options
         this.formdata.employmentStatus = 0;
         this.formdata.province         = 0;

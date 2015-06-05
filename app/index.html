@@ -22,11 +22,11 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <div id="pagemask"></div>
     <nav class="navbar navbar-default navbar-fixed-top header">
         <div class="container">
             <div class="pull-left"><a href="/#/"><img src="images/prototype_mbna.png" height="23" /></a></div>
-            <div class="pull-right" slide-toggle="#help-content">
+            <div class="pull-right" slide-toggle="#help-content" style="cursor: pointer">
                 <span class="help">Need Help?</span>
                 <img src="images/prototype_helpIcon.png" height="23" />
             </div>
@@ -34,7 +34,7 @@
     </nav>
     <div class="container slideable" id="help-content">
         <div class="container">
-            <h2>Ask Us</h2>
+            <h2>Ask Us <span class="glyphicon glyphicon-remove pull-right" style="color: #cccccc; cursor: pointer" slide-toggle="#help-content"></span></h2>
 
             <div>
                 <strong>Monday to Friday</strong><br />
