@@ -213,6 +213,10 @@ body {
 
 .bar-active {
     background-color: #658ddb;
+    border-right: 1px solid #002c5c;
+}
+.bar-active:nth-child(6) {
+    border-right: none;
 }
 
 .section-incomplete, .section-complete {
@@ -416,6 +420,10 @@ input[type="radio"] {
     background-color: #dadfed;
     text-align: center;
     padding: 15px;
+    border-radius: 0;
+
+    /* Fix for iOS */
+    height: 57px;
 }
 input[type="radio"].radio-yes:after {
     content: 'Yes';
@@ -587,14 +595,18 @@ option[disabled] {
 
 ::-webkit-input-placeholder {
     color: #cccccc !important;
+    font-weight: normal !important;
 }
 :-moz-placeholder { /* older Firefox*/
     color: #cccccc !important;
+    font-weight: normal !important;
 }
 ::-moz-placeholder { /* Firefox 19+ */
     color: #cccccc !important;
+    font-weight: normal !important;
 }
 
 :-ms-input-placeholder {
     color: #cccccc !important;
+    font-weight: normal !important;
 }

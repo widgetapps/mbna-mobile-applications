@@ -29,88 +29,119 @@
         <div class="col-xs-4 review-label">SIN:</div>
         <div class="col-xs-8">{{data.sin}}</div>
     </div>
+    <div class="row">
+        <div class="col-xs-4 review-label">Mother's Maiden name:</div>
+        <div class="col-xs-8">{{data.maidenName}}</div>
+    </div>
 </div>
 
 <div class="content-whitebg container review-content">
     <h2>Contact Information  <a href="/#/contact">Edit</a></h2>
     <div class="row">
         <div class="col-xs-4 review-label">Home Address:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.address1}}</div>
+    </div>
+    <div class="row" ng-if="data.address2">
+        <div class="col-xs-4 review-label">Home Address 2:</div>
+        <div class="col-xs-8">{{data.address2}}</div>
     </div>
     <div class="row">
         <div class="col-xs-4 review-label">City/Town:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.city}}</div>
     </div>
     <div class="row">
         <div class="col-xs-4 review-label">Province:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.province}}</div>
     </div>
     <div class="row">
         <div class="col-xs-4 review-label">Postal Code:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.postalCode}}</div>
     </div>
     <div class="row">
         <div class="col-xs-4 review-label">Email:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.email}}</div>
     </div>
-    <div class="row">
-        <div class="col-xs-4 review-label">Phone Number:</div>
-        <div class="col-xs-8"></div>
+    <div class="row" ng-if="data.homePhone">
+        <div class="col-xs-4 review-label">Home Phone Number:</div>
+        <div class="col-xs-8">{{data.homePhone}}</div>
+    </div>
+    <div class="row" ng-if="data.mobilePhone">
+        <div class="col-xs-4 review-label">Mobile Phone Number:</div>
+        <div class="col-xs-8">{{data.mobilePhone}}</div>
     </div>
 </div>
 
 <div class="content-whitebg container review-content">
     <h2>Employment Information  <a href="/#/employment">Edit</a></h2>
-    <div class="row">
+    <div class="row" ng-if="data.employerName">
         <div class="col-xs-4 review-label">Employer Name:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.employerName}}</div>
     </div>
-    <div class="row">
+    <div class="row" ng-if="data.employedYears">
         <div class="col-xs-4 review-label">Years Employed:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.employedYears}}</div>
     </div>
-    <div class="row">
+
+    <div class="row" ng-if="data.companyName">
+        <div class="col-xs-4 review-label">Company Name:</div>
+        <div class="col-xs-8">{{data.companyName}}</div>
+    </div>
+    <div class="row" ng-if="data.yearsBusiness">
+        <div class="col-xs-4 review-label">Years in business:</div>
+        <div class="col-xs-8">{{data.yearsBusiness}}</div>
+    </div>
+
+    <div class="row" ng-if="data.workStreet">
         <div class="col-xs-4 review-label">Employer Address:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.workStreet}}</div>
     </div>
-    <div class="row">
+    <div class="row" ng-if="data.workCity">
         <div class="col-xs-4 review-label">City/Town:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.workCity}}</div>
     </div>
-    <div class="row">
+    <div class="row" ng-if="data.workProvince">
         <div class="col-xs-4 review-label">Province:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.workProvince}}</div>
     </div>
-    <div class="row">
+    <div class="row" ng-if="data.workPostalCode">
         <div class="col-xs-4 review-label">Postal Code:</div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8">{{data.workPostalCode}}</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">&nbsp;</div>
+    </div>
+    <div class="row" ng-if="data.workPhone">
+        <div class="col-xs-4 review-label">Phone Number:</div>
+        <div class="col-xs-8">{{data.workPhone}}</div>
     </div>
     <div class="row">
         <div class="col-xs-12">&nbsp;</div>
     </div>
     <div class="row">
-        <div class="col-xs-6 review-label">Phone Number:</div>
-        <div class="col-xs-6"></div>
+        <div class="col-xs-4 review-label">Your Income:</div>
+        <div class="col-xs-8">${{(data.income * data.incomeFreq)}}</div>
+    </div>
+    <div class="row" ng-if="data.otherIncome">
+        <div class="col-xs-4 review-label">Other Income:</div>
+        <div class="col-xs-8">${{(data.otherIncome * data.otherIncomeFreq)}}</div>
     </div>
     <div class="row">
-        <div class="col-xs-12">&nbsp;</div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6 review-label">Your Income:</div>
-        <div class="col-xs-6"></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6 review-label">Other Income:</div>
-        <div class="col-xs-6"></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6 review-label">Household Income:</div>
-        <div class="col-xs-6"></div>
+        <div class="col-xs-4 review-label">Household Income:</div>
+        <div class="col-xs-8">${{(data.income * data.incomeFreq) + (data.otherIncome * data.otherIncomeFreq)}}</div>
     </div>
 </div>
 
 <div class="content-whitebg container review-content">
     <h2>Card Features  <a href="/#/features">Edit</a></h2>
+
+    <div class="row">
+        <div class="col-xs-4 review-label">Balance Transfer:</div>
+        <div class="col-xs-8">Yes</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 review-label">Creditwise:</div>
+        <div class="col-xs-8">Yes</div>
+    </div>
 </div>
 
 <div class="content-whitebg container review-content" ng-if="data.inlineFlow">
