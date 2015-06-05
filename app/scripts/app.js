@@ -73,6 +73,10 @@ angular
             templateUrl: 'views/review.html',
             controller: 'MainCtrl'
         })
+        .when('/tac2', {
+            templateUrl: 'views/tac2.html',
+            controller: 'MainCtrl'
+        })
         .when('/verification', {
             templateUrl: 'views/verification.html',
             controller: 'MainCtrl'

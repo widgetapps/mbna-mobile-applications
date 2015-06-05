@@ -3,6 +3,20 @@
 
     <p>You can add up to 3 credits cards. We will transfer the balance of these cards to your new MBNA credit card.</p>
 
+    <div ng-if="data.xferCard.number != null" class="xfer-card-info">
+        <h2>Added cards</h2>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <strong>{{data.fxerCard.institution}}</strong><br />
+                {{data.xferCard.number}}<br />
+                Transferring ${{data.xferCard.amount}}
+            </div>
+            <div class="col-xs-1">
+                <a href="/#/balance_add" class="pull-right">Edit</a>
+            </div>
+        </div>
+    </div>
+
     <a href="/#/balance_add" class="btn btn-block btn-gray"><img src="images/prototype_plus.png" width="15" />&nbsp;&nbsp;Add Card</a>
 </div>
 

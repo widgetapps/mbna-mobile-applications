@@ -10,6 +10,7 @@
 angular.module('mbnaApplicationApp')
   .controller('MainCtrl', ['$scope', '$anchorScroll', 'data', function ($scope, $anchorScroll, data) {
         $scope.data = data.formdata;
+        $scope.provinces = data.provinces;
 
         //$scope.clearData = data.clearData();
 

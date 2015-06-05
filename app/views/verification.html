@@ -98,17 +98,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-6">
-            <a href="/#/cancel" class="btn btn-block btn-lg btn-light">Cancel</a>
-        </div>
-        <div class="col-xs-6">
-            <a href="/#/approved" class="btn btn-block btn-lg btn-dark" ng-click="data.step=6">Continue</a>
+        <div class="col-xs-12">
+            <a href="/#/cancel" class="btn btn-block btn-lg btn-light btn-pair">Cancel</a><a href="/#/approved" class="btn btn-block btn-lg btn-dark btn-pair pull-right" ng-click="data.step=6">Continue</a>
         </div>
     </div>
 </div>
 
 
-<div class="footer"> <!-- Need to create a directive to access the factory -->
+<div class="footer">
     <div class="container">
         <a href="#" class="btn pull-left lang-toggle">FR</a>
         <a href="#" class="pull-right privacy">Privacy <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>

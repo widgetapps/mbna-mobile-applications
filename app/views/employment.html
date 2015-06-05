@@ -22,7 +22,7 @@
         <div class="form-group">
             <label for="employmentStatus">Employment Status</label>
             <select class="form-control" id="employmentStatus" ng-model="data.employmentStatus">
-                <option value="0" selected="selected">Select your employment status</option>
+                <option value="0" selected="selected" disabled>Select your employment status</option>
                 <option value="1">Employed</option>
                 <option value="2">Self Employed</option>
                 <option value="3">Student</option>
@@ -56,11 +56,20 @@
         <div class="form-group">
             <label for="workProvince">Province</label>
             <select class="form-control" id="workProvince" ng-model="data.workProvince">
-                <option selected="selected">Select your province</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="0">Select your province</option>
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NU">Nunavut</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="YT">Yukon</option>
             </select>
         </div>
         <div class="form-group">
@@ -71,10 +80,17 @@
             <label for="occupation">Your Occupation</label>
             <select class="form-control" id="occupation" ng-model="data.occupation">
                 <option selected="selected">Select occupation type</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option>Teacher</option>
+                <option>Principal/Superintendant</option>
+                <option>Education/Other</option>
+                <option>Doctor/Intern/Resident</option>
+                <option>Student Doctor</option>
+                <option>Dentist</option>
+                <option>Student Dentist</option>
+                <option>Engineer</option>
+                <option>Lawyer/Judge</option>
+                <option>Student Lawyer</option>
+                <option>Preferred Professional/Other</option>
             </select>
         </div>
         <div class="form-group">
@@ -87,35 +103,53 @@
         </div>
         <div class="form-group">
             <label for="income">Your Income</label>
-            <select class="form-control" id="income" ng-model="data.income">
-                <option selected="selected">Select your annual income</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+            <input type="number" class="form-control" id="income" ng-model="data.income" placeholder="Enter income" />
+        </div>
+        <div class="form-group">
+            <label for="incomeFreq">Frequency of Income</label>
+            <select class="form-control" id="incomeFreq" ng-model="data.incomeFreq">
+                <option selected="selected">Select frequency of  income</option>
+                <option value="1">Annual</option>
+                <option value="12">Monthly</option>
+                <option value="24">Bi-Monthly</option>
+                <option value="26">Every 2 Weeks</option>
+                <option value="52">Weekly</option>
             </select>
         </div>
         <div class="form-group">
             <label for="otherIncome">Other Income</label>
-            <select class="form-control" id="otherIncome" ng-model="data.otherIncome">
-                <option selected="selected">Select other annual income</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+            <input type="text" class="form-control" id="otherIncome" ng-model="data.otherIncome" placeholder="Enter your income" />
+        </div>
+        <div class="form-group">
+            <label for="otherIncomeFreq">Other Income Frequency</label>
+            <select class="form-control" id="otherIncomeFreq" ng-model="data.otherIncomeFreq">
+                <option value="0" selected="selected">Select your income frequency</option>
+                <option value="1">Annual</option>
+                <option value="12">Monthly</option>
+                <option value="24">Bi-Monthly</option>
+                <option value="26">Every 2 Weeks</option>
+                <option value="52">Weekly</option>
             </select>
         </div>
         <div class="form-group">
             <label for="otherSource">Source of Other Income</label>
             <select class="form-control" id="otherSource" ng-model="data.otherSource">
                 <option selected="selected">Select source of other income</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option>Sales Bonus/Other Primary Comp</option>
+                <option>Household/Family Income</option>
+                <option>Inheritance/Trust</option>
+                <option>Investment Income</option>
+                <option>Second Job</option>
+                <option>Rental Income</option>
+                <option>Retirement Income</option>
+                <option>Small Business Income</option>
+                <option>Social Insurance</option>
+                <option>Unemployment Income</option>
             </select>
         </div>
     </form>
+
+    <p>Total annual household income: ${{(data.income * data.incomeFreq) + (data.otherIncome * data.otherIncomeFreq)}}</p>
     <a href="/#/features" class="btn btn-lg btn-block btn-blue" ng-click="data.step=3">Next</a>
 </div>
 
@@ -134,10 +168,10 @@
             <label for="businessNature">Nature of Business</label>
             <select class="form-control" id="businessNature" ng-model="data.businessNature">
                 <option selected="selected">Select the nature of your business</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option>Business Type 1</option>
+                <option>Business Type 2</option>
+                <option>Business Type 3</option>
+                <option>Business Type 4</option>
             </select>
         </div>
         <div class="form-group">
@@ -159,11 +193,20 @@
         <div class="form-group">
             <label for="workProvince2">Province</label>
             <select class="form-control" id="workProvince2" ng-model="data.workProvince">
-                <option selected="selected">Select your province</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="0">Select your province</option>
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NU">Nunavut</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="YT">Yukon</option>
             </select>
         </div>
         <div class="form-group">
@@ -204,10 +247,16 @@
             <label for="otherSource2">Source of Other Income</label>
             <select class="form-control" id="otherSource2" ng-model="data.otherSource">
                 <option selected="selected">Select source of other income</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option>Sales Bonus/Other Primary Comp</option>
+                <option>Household/Family Income</option>
+                <option>Inheritance/Trust</option>
+                <option>Investment Income</option>
+                <option>Second Job</option>
+                <option>Rental Income</option>
+                <option>Retirement Income</option>
+                <option>Small Business Income</option>
+                <option>Social Insurance</option>
+                <option>Unemployment Income</option>
             </select>
         </div>
     </form>
@@ -226,10 +275,15 @@
         <label for="studentStatus">Student Status</label>
         <select class="form-control" id="studentStatus" ng-model="data.studentStatus">
             <option selected="selected">Select your student status</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            <option>1st year University</option>
+            <option>2nd year University</option>
+            <option>3rd year University</option>
+            <option>4th year University</option>
+            <option>Graduate Student</option>
+            <option>Student/Other</option>
+            <option>Trade School/College</option>
+            <option>Mature Students</option>
+            <option>CEGEP</option>
         </select>
     </div>
     <div class="form-group">
@@ -242,13 +296,7 @@
     </div>
     <div class="form-group">
         <label for="graduationYear">In what year do you expect to graduate?</label>
-        <select class="form-control" id="graduationYear" ng-model="data.graduationYear">
-            <option selected="selected">Select your graduation year</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
+        <input type="number" class="form-control" id="graduationYear" ng-model="data.graduationYear" placeholder="Enter your graduation year" />
     </div>
     <div class="form-group">
         <label for="alternatePhone">Alternate Phone Number</label>
@@ -352,10 +400,16 @@
             <label for="personalSource">Source of Personal Income</label>
             <select class="form-control" id="personalSource" ng-model="data.personalSource">
                 <option selected="selected">Select source of personal income</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option>Sales Bonus/Other Primary Comp</option>
+                <option>Household/Family Income</option>
+                <option>Inheritance/Trust</option>
+                <option>Investment Income</option>
+                <option>Second Job</option>
+                <option>Rental Income</option>
+                <option>Retirement Income</option>
+                <option>Small Business Income</option>
+                <option>Social Insurance</option>
+                <option>Unemployment Income</option>
             </select>
         </div>
     </form>
